@@ -48,10 +48,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "./ui/tabs";
-import { Separator } from "./ui/separator";
 import { Progress } from "./ui/progress";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { ScrollArea } from "./ui/scroll-area";
 import {
   DropdownMenu,
   DropdownMenuContent,

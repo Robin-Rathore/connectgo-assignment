@@ -62,7 +62,7 @@ const Navbar = () => {
               <div className="flex h-16 items-center justify-between">
                 {/* Logo and Brand */}
                 <div className="flex items-center">
-                  <a href="/" className="flex items-center">
+                  <Link to={"/"} className="flex items-center">
                     <div
                       className="h-8 w-8 rounded-full mr-2 flex items-center justify-center"
                       style={{ backgroundColor: mainColor }}
@@ -72,7 +72,7 @@ const Navbar = () => {
                     <span className="font-bold text-xl hidden sm:inline">
                       ConnectGo
                     </span>
-                  </a>
+                  </Link>
                 </div>
     
                 {/* Desktop Navigation */}
@@ -83,24 +83,24 @@ const Navbar = () => {
                   >
                     Teams
                   </Link>
-                  <a
-                    href="/challenges"
+                  <Link
+                    to={"/challenges"}
                     className="text-gray-600 hover:text-gray-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                   >
                     Challenges
-                  </a>
-                  <a
-                    href="/leaderboard"
+                  </Link>
+                  <Link
+                    to={"/leaderboard"}
                     className="text-gray-600 hover:text-gray-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                   >
                     Leaderboard
-                  </a>
-                  <a
-                    href="/explore"
+                  </Link>
+                  <Link
+                    to={"/explore"}
                     className="text-gray-600 hover:text-gray-900 px-2 py-1 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                   >
                     Explore
-                  </a>
+                  </Link>
                   <Button
                     style={{ backgroundColor: mainColor }}
                     className="text-white"
@@ -156,7 +156,7 @@ const Navbar = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <div className="flex items-center justify-start gap-2 p-2">
-                      <Link to={"./user-profile"} >
+                      <Link to={"/user-profile"} >
                         <div className="flex flex-col space-y-1 leading-none">
                           <p className="font-medium">Mia Chen</p>
                           <p className="text-sm text-gray-500">mia@example.com</p>
@@ -210,34 +210,34 @@ const Navbar = () => {
                         </div>
                         <Separator />
                         <nav className="flex flex-col space-y-4 mt-4">
-                          <a
-                            href="/team-profile"
+                          <Link
+                            to={"/team-profile"}
                             className="flex items-center text-gray-600 hover:text-gray-900 px-2 py-2 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                           >
                             <Users className="mr-2 h-4 w-4" />
                             Teams
-                          </a>
-                          <a
-                            href="/challenges"
+                          </Link>
+                          <Link
+                            to={"/challenges"}
                             className="flex items-center text-gray-600 hover:text-gray-900 px-2 py-2 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                           >
                             <Trophy className="mr-2 h-4 w-4" />
                             Challenges
-                          </a>
-                          <a
-                            href="/leaderboard"
+                          </Link>
+                          <Link
+                            to={"/leaderboard"}
                             className="flex items-center text-gray-600 hover:text-gray-900 px-2 py-2 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                           >
                             <Award className="mr-2 h-4 w-4" />
                             Leaderboard
-                          </a>
-                          <a
-                            href="/explore"
+                          </Link>
+                          <Link
+                            to={"/explore"}
                             className="flex items-center text-gray-600 hover:text-gray-900 px-2 py-2 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
                           >
                             <Search className="mr-2 h-4 w-4" />
                             Explore
-                          </a>
+                          </Link>
                           <Button
                             className="w-full justify-center text-white"
                             style={{ backgroundColor: mainColor }}

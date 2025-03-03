@@ -22,6 +22,7 @@ import {
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -141,13 +142,13 @@ const Footer = () => {
             <ul className="space-y-2">
               {aboutLinks.map((link, i) => (
                 <li key={i}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={"/link.href"} 
                     className="text-gray-600 hover:text-pink-500 transition-colors flex items-center"
                   >
                     <ArrowRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.text}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -158,12 +159,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {resourceLinks.map((link, i) => (
                 <li key={i}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={"/link.href"} 
                     className="text-gray-600 hover:text-pink-500 transition-colors"
                   >
                     {link.text}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -244,9 +245,9 @@ const Footer = () => {
               © {year} ConnectGo. All rights reserved.
             </div>
             <div className="mt-2 space-x-4 text-sm">
-              <a href="/privacy" className="text-gray-600 hover:text-pink-500 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="text-gray-600 hover:text-pink-500 transition-colors">Terms of Service</a>
-              <a href="/cookies" className="text-gray-600 hover:text-pink-500 transition-colors">Cookie Policy</a>
+              <Link to={"/privacy"} className="text-gray-600 hover:text-pink-500 transition-colors">Privacy Policy</Link>
+              <Link to={"/terms"} className="text-gray-600 hover:text-pink-500 transition-colors">Terms of Service</Link>
+              <Link to={"/cookies"} className="text-gray-600 hover:text-pink-500 transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>
